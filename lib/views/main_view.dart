@@ -30,9 +30,14 @@ class _MainViewState extends State<MainView> {
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
               icon: const badges.Badge(
-                badgeContent: Text('3'),
+                badgeContent: Text(
+                  '3',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
                 badgeStyle: badges.BadgeStyle(
-                  badgeColor: secondaryColorLight,
+                  badgeColor: mainColorLight,
                 ),
                 child: Icon(
                   Icons.shopping_cart,
