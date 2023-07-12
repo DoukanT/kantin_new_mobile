@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kantin_new_mobile/views/login_Page_View.dart';
+import 'package:kantin_new_mobile/views/login_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPageView(),
+      home: LoginView(),
     );
   }
 }

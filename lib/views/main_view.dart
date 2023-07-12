@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kantin_new_mobile/constants/global_constants.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:kantin_new_mobile/views/menu_view.dart';
+import 'package:kantin_new_mobile/views/past_orders.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -13,7 +14,7 @@ class MainView extends StatefulWidget {
 int viewIndex = 0;
 const views = [
   MenuView(), // Menu
-  MenuView(), // Past Orders
+  PastOrders(), // Past Orders
   MenuView(), // Profile
   MenuView(), // Cart
 ];

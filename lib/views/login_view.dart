@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kantin_new_mobile/views/main_view.dart';
-import 'package:kantin_new_mobile/views/menu_view.dart';
+
 import '../constants/global_constants.dart';
 import '../widgets/login_page_view_widgets/background_Image.dart';
 import '../widgets/login_page_view_widgets/password_Input.dart';
-import '../widgets/login_page_view_widgets/rounded_Button.dart';
 import '../widgets/login_page_view_widgets/text_Input.dart';
 
-class LoginPageView extends StatelessWidget {
-  const LoginPageView({super.key});
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
 
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -63,15 +67,15 @@ class LoginPageView extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        RoundedButton(
-                          onPressed: (_) {
+                        ElevatedButton(
+                          onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const MenuView()),
+                                  builder: (context) => const MainView()),
                             );
                           },
-                          buttonText: 'Login',
+                          child: const Text("Login"),
                         ),
                         const SizedBox(
                           height: 25,
@@ -95,4 +99,3 @@ class LoginPageView extends StatelessWidget {
     );
   }
 }
-
